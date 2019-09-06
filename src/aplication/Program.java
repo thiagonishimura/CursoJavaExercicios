@@ -8,24 +8,19 @@ public class Program {
 	public static void main(String[] args) {
 		Locale.setDefault(Locale.US);
 		Scanner sc = new Scanner(System.in);
-
-		System.out.println("Digite 3 numeros inteiros:");
-		int a = sc.nextInt();
-		int b = sc.nextInt();
-		int c = sc.nextInt();
-
-		if (a > b && a > c) {
-			System.out.print("O maior é: " + a);
-		} 
 		
-		else if (b > a && b > c) {
-			System.out.print("O maior é: " + b);
+		System.out.println("Enter three student scores: ");
+		double nota1 = sc.nextDouble();
+		double nota2 = sc.nextDouble();
+		double nota3 = sc.nextDouble();
+		
+		double soma = nota1+nota2+nota3;
+		
+		System.out.printf("Final score = %.2f%n", soma);
+		if(soma<60.00) {
+			System.out.println("FAILED");
 		}
-
-		else {
-			System.out.print("O maior é: " + c);
-		}
-
+			
 		sc.close();
 	}
 
