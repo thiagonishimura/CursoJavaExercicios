@@ -9,15 +9,23 @@ public class Program {
 		Locale.setDefault(Locale.US);
 		Scanner sc = new Scanner(System.in);
 
-		System.out.print("Enter glucose measure: ");
-		double glucose = sc.nextDouble();
-		if (glucose <= 100.0) {
-			System.out.println("Normal");
-		} else if (glucose <= 140.0) {
-			System.out.println("High");
-		} else {
-			System.out.println("Diabetes");
+		System.out.println("Enter two integer numbers: ");
+		int x = sc.nextInt();
+		int y = sc.nextInt();
+		int begin = x, end = y;
+		
+		if (y < x) {
+			begin = y;
+			end = x;
 		}
+		int sum = 0;
+		for (int i = begin; i <= end; i++) {
+			if (i % 2 != 0) {
+				sum += i;
+			}
+		}
+		
+		System.out.println("Sum of odd numbers = " + sum);
 
 		sc.close();
 	}
