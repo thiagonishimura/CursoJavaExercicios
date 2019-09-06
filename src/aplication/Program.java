@@ -9,13 +9,15 @@ public class Program {
 		Locale.setDefault(Locale.US);
 		Scanner sc = new Scanner(System.in);
 
-		System.out.print("Enter an integer value: ");
+		System.out.print("Enter number of students: ");
 		int n = sc.nextInt();
-		while (n != 0) {
-			int square = n * n;
-			System.out.println(square);
-			System.out.print("Enter an integer value: ");
-			n = sc.nextInt();
+		for (int i = 1; i <= n; i++) {
+			System.out.print("Student #" + i + ": ");
+			double score1 = sc.nextDouble();
+			double score2 = sc.nextDouble();
+			double score3 = sc.nextDouble();
+			double finalScore = score1 + score2 + score3;
+			System.out.printf("Final score: %.2f%n", finalScore);
 		}
 
 		sc.close();
