@@ -9,23 +9,14 @@ public class Program {
 		Locale.setDefault(Locale.US);
 		Scanner sc = new Scanner(System.in);
 
-		System.out.println("Enter two integer numbers: ");
-		int x = sc.nextInt();
-		int y = sc.nextInt();
-		int begin = x, end = y;
-		
-		if (y < x) {
-			begin = y;
-			end = x;
+		System.out.print("Enter an integer value: ");
+		int n = sc.nextInt();
+		while (n != 0) {
+			int square = n * n;
+			System.out.println(square);
+			System.out.print("Enter an integer value: ");
+			n = sc.nextInt();
 		}
-		int sum = 0;
-		for (int i = begin; i <= end; i++) {
-			if (i % 2 != 0) {
-				sum += i;
-			}
-		}
-		
-		System.out.println("Sum of odd numbers = " + sum);
 
 		sc.close();
 	}
